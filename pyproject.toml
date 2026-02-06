@@ -1,0 +1,70 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pydantic-ai-tools-nory-x402"
+version = "0.1.0"
+description = "Nory x402 payment tools for Pydantic AI - enables AI agents to make blockchain payments"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "Nory", email = "support@noryx402.com" }
+]
+keywords = [
+    "pydantic-ai",
+    "ai",
+    "agents",
+    "payments",
+    "x402",
+    "blockchain",
+    "solana",
+    "ethereum",
+    "crypto",
+    "nory",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Office/Business :: Financial",
+]
+dependencies = [
+    "pydantic-ai>=0.0.30",
+    "httpx>=0.25.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+
+[project.urls]
+Homepage = "https://noryx402.com"
+Documentation = "https://github.com/TheMemeBanker/pydantic-ai-tools-nory-x402"
+Repository = "https://github.com/TheMemeBanker/pydantic-ai-tools-nory-x402"
+"x402 Protocol" = "https://www.x402.org/"
+
+[tool.hatch.build.targets.wheel]
+packages = ["pydantic_ai_tools_nory_x402"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
